@@ -1,12 +1,12 @@
 import { dashboardContent } from '../../data/mockData'
-import { getSectionByKey, type SectionKey } from '../../data/sections'
+import { getSectionByKey, type DashboardSectionKey } from '../../data/sections'
 import { Card } from './Card'
 import { MetricCard } from './MetricCard'
 import { Pill } from './Pill'
 import { SectionHero } from './SectionHero'
 
 interface DashboardPageProps {
-  sectionKey: SectionKey
+  sectionKey: DashboardSectionKey
 }
 
 export function DashboardPage({ sectionKey }: DashboardPageProps) {

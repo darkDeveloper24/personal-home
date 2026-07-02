@@ -1,6 +1,7 @@
 import { Activity, BriefcaseBusiness, Wallet, type LucideIcon } from 'lucide-react'
 
 export type SectionKey = 'work' | 'body' | 'money'
+export type DashboardSectionKey = Exclude<SectionKey, 'work'>
 
 export interface SectionMeta {
   key: SectionKey
@@ -15,7 +16,7 @@ export const sections: SectionMeta[] = [
   {
     key: 'work',
     title: 'Work',
-    subtitle: 'Focus, output, and momentum',
+    subtitle: '按月规划、推进与复盘工作',
     path: '/work',
     accent: 'var(--work-accent)',
     icon: BriefcaseBusiness,

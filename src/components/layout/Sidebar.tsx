@@ -1,4 +1,4 @@
-import { Home, ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Home } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 import { sections, type SectionKey } from '../../data/sections'
@@ -16,7 +16,7 @@ export function Sidebar({ currentSection }: SidebarProps) {
         </div>
         <div>
           <p className="sidebar__eyebrow">Personal home</p>
-          <h2 className="sidebar__title">Quiet systems</h2>
+          <h2 className="sidebar__title">Working system</h2>
         </div>
       </div>
 
@@ -51,9 +51,9 @@ export function Sidebar({ currentSection }: SidebarProps) {
       </nav>
 
       <div className="sidebar__note">
-        <p className="sidebar__note-label">Theme</p>
+        <p className="sidebar__note-label">Approach</p>
         <p className="sidebar__note-value">
-          Calm structure with richer contrast, soft gradients, and deliberate spacing.
+          Make the month visible, keep work scoped, and move the next useful task forward.
         </p>
       </div>
     </aside>

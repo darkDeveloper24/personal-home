@@ -8,7 +8,7 @@ import { Sidebar } from './Sidebar'
 export function AppShell() {
   const location = useLocation()
   const currentSection = getSectionByPath(location.pathname)
-  const todayLabel = new Intl.DateTimeFormat('en-US', {
+  const todayLabel = new Intl.DateTimeFormat('zh-CN', {
     weekday: 'long',
     month: 'long',
     day: 'numeric',
@@ -20,17 +20,14 @@ export function AppShell() {
 
   return (
     <div className={`app-shell ${currentSection ? `theme-${currentSection.key}` : ''}`}>
-      <div className="app-shell__glow app-shell__glow--primary" aria-hidden="true" />
-      <div className="app-shell__glow app-shell__glow--secondary" aria-hidden="true" />
-
       <Sidebar currentSection={currentSection?.key} />
 
       <main className="app-shell__main">
         <header className="topbar">
           <div>
-            <p className="topbar__eyebrow">Designed for clarity</p>
+            <p className="topbar__eyebrow">Quiet planning</p>
             <p className="topbar__headline">
-              {currentSection?.subtitle ?? 'A personal dashboard for work, health, and money.'}
+              {currentSection?.subtitle ?? 'A calmer system for work, body, and money.'}
             </p>
           </div>
 
@@ -41,7 +38,7 @@ export function AppShell() {
             </span>
             <span>
               <MoonStar size={16} />
-              Slow systems, long horizon
+              Flat surfaces, clearer priorities
             </span>
           </div>
         </header>
